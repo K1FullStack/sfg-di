@@ -1,6 +1,6 @@
 package guru.springfreamework.sfg_di.controllers;
 
-import guru.springfreamework.sfg_di.services.GreetingServiceImpl;
+import guru.springfreamework.sfg_di.services.ConstructorGreetingService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -14,7 +14,7 @@ class PropertyInjectedControllerTest {
   void setUp() {
     controller = new PropertyInjectedController();
 
-    controller.greetingService = new GreetingServiceImpl();
+    controller.greetingService = new ConstructorGreetingService();
   }
 
   @Test
