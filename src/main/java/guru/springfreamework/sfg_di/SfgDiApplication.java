@@ -11,7 +11,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class SfgDiApplication {
 
   public static void main(String[] args) {
-    ConfigurableApplicationContext context =  SpringApplication.run(SfgDiApplication.class, args);
+    ConfigurableApplicationContext context = SpringApplication.run(SfgDiApplication.class, args);
 
     MyController myController = (MyController) context.getBean("myController");
 
