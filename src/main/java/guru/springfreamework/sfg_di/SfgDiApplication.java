@@ -16,31 +16,23 @@ public class SfgDiApplication {
   public static void main(String[] args) {
     ConfigurableApplicationContext context = SpringApplication.run(SfgDiApplication.class, args);
 
+    log.info("---------- primary");
     MyController myController = (MyController) context.getBean("myController");
-
-    String greeting = myController.sayHello();
-
-    log.info(greeting);
+    log.info(myController.sayHello());
 
     log.info("---------- property");
-
     PropertyInjectedController propertyInjectedController =
         (PropertyInjectedController) context.getBean("propertyInjectedController");
-
     log.info("property injected: {}", propertyInjectedController.getGreeting());
 
     log.info("---------- setter");
-
     SetterInjectedController setterInjectedController =
         (SetterInjectedController) context.getBean("setterInjectedController");
-
     log.info("setter injected: {}", setterInjectedController.getGreeting());
 
     log.info("---------- constructor");
-
     ConstructorInjectedController constructorInjectedController =
         (ConstructorInjectedController) context.getBean("constructorInjectedController");
-
     log.info("constructor injected: {}", constructorInjectedController.getGreeting());
   }
 }
