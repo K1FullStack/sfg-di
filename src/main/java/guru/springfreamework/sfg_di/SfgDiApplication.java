@@ -28,16 +28,16 @@ public class SfgDiApplication {
     log.info("---------- property");
     PropertyInjectedController propertyInjectedController =
         (PropertyInjectedController) context.getBean("propertyInjectedController");
-    log.info("property injected: {}", propertyInjectedController.getGreeting());
+    log.info(propertyInjectedController.getGreeting());
 
     log.info("---------- setter");
     SetterInjectedController setterInjectedController =
         (SetterInjectedController) context.getBean("setterInjectedController");
-    log.info("setter injected: {}", setterInjectedController.getGreeting());
+    log.info(setterInjectedController.getGreeting());
 
     log.info("---------- constructor");
     ConstructorInjectedController constructorInjectedController =
         (ConstructorInjectedController) context.getBean("constructorInjectedController");
-    log.info("constructor injected: {}", constructorInjectedController.getGreeting());
+    log.info(constructorInjectedController.getGreeting());
   }
 }
