@@ -7,11 +7,11 @@ import org.springframework.stereotype.Component;
 @Component
 @Scope(ConfigurableBeanFactory.SCOPE_PROTOTYPE)
 public class PrototypeBean {
-    public PrototypeBean() {
-        System.out.println("creating a prototype bean!!!");
-    }
+  public PrototypeBean() {
+    System.out.println("creating a prototype bean!!!");
+  }
 
-    public String getMyScope() {
-        return "im a prototype!";
-    }
+  public String getMyScope() {
+    return "im a prototype!";
+  }
 }

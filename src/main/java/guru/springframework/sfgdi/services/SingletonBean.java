@@ -4,11 +4,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class SingletonBean {
-    public SingletonBean() {
-        System.out.println("creating a singleton bean !!!");
-    }
+  public SingletonBean() {
+    System.out.println("creating a singleton bean !!!");
+  }
 
-    public String getMyScope() {
-        return "Im a Singleton";
-    }
+  public String getMyScope() {
+    return "Im a Singleton";
+  }
 }
